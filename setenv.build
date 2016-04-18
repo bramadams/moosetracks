@@ -1,4 +1,10 @@
 #!/bin/sh
 
 export BUILD_ARCH=`uname -s -p | tr ' ' '_'`
+
+if [ "$BUILD_ARCH" = "unknown" ];
+then
+    export BUILD_ARCH="Linux_x86"
+fi
+
 export SRCTOP=${PWD}

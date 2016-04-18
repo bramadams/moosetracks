@@ -1,5 +1,5 @@
 #
-# Build configuration for Linux 64
+# Build configuration for Linux
 #
 
 ################################################################################
@@ -14,7 +14,7 @@ LD = $(CC)
 AR = /usr/bin/ar
 override ARFLAGS = rcs
 AROUTPUT =
-SQLITE_LIB_PATH = $(SQLITE_PATH)/lib64
+SQLITE_LIB_PATH = $(SQLITE_PATH)/lib
 
 ################################################################################
 # File extensions

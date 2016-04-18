@@ -3,6 +3,7 @@ script:
   - ./makewrapper.sh default 2&> makaotrace.txt
   - gzip makaotrace.txt
 
+
 deploy:
   provider: releases
   api_key: 220d271c794b1257713d7e6fdc6e632445576497

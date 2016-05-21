@@ -1,3 +1,15 @@
+export BUILD_ARCH:=$(shell uname -s -p | tr ' ' '_')
+
+ifeq ( "$(BUILD_ARCH)" , "Linux_unknown" )
+    export BUILD_ARCH:="Linux_x86"
+endif
+
+export SRCTOP:=$(PWD)
+
+all:
+	echo $(BUILD_ARCH)
+	echo $(SRCTOP)
+
 .DELETE_ON_ERROR:
 
 ifeq ($(BUILD_ARCH),)

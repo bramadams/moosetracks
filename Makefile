@@ -6,10 +6,6 @@ endif
 
 export SRCTOP:=$(PWD)
 
-all:
-	echo $(BUILD_ARCH)
-	echo $(SRCTOP)
-
 .DELETE_ON_ERROR:
 
 ifeq ($(BUILD_ARCH),)

@@ -1,8 +1,5 @@
 export BUILD_ARCH:=$(shell uname -s -p | tr ' ' '_')
-
-ifeq ( "$(BUILD_ARCH)" , "Linux_unknown" )
-    export BUILD_ARCH:="Linux_x86"
-endif
+export BUILD_ARCH:=$(BUILD_ARCH:Linux_unknown=Linux_x86)
 
 export SRCTOP:=$(PWD)
 
